@@ -21,4 +21,17 @@ class Company
         $company = $this->em->getRepository('AppBundle:Company')->findOneBy(['account_name' => $this->accountName]);
         return $company;
     }
+
+    public function isActive()
+    {
+        $company = $this->getCompany();
+
+        if (!$company)
+            return false;
+
+        if ($company->getActive() == "N")
+            return false;
+
+        return true;
+    }
 }

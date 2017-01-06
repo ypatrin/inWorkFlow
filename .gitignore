@@ -12,3 +12,6 @@ logs
 logs/*
 ssl
 ssl/*
+
+.idea
+.idea/*

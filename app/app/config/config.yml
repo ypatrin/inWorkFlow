@@ -37,8 +37,8 @@ twig:
     strict_variables: "%kernel.debug%"
     cache:            false
     globals:
-            base_url: "http://inworkflow.pp.ua/"
-            base_host: "inworkflow.pp.ua"
+            base_url: "http://inworkflow.com/"
+            base_host: "inworkflow.com"
 
 # Assetic Configuration
 assetic:

@@ -13,6 +13,20 @@ class IndexController extends Controller
      */
     public function indexAction(Request $request)
     {
+        //load company
+        $companyService = $this->get('service.company');
+        $company = $companyService->getCompany();
+
+        if (!$company)
+        {
+            return $this->render('index/loginError.html.twig', ['error' => 'notFound']);
+        }
+
+        if (!$companyService->isActive())
+        {
+            return $this->render('index/loginError.html.twig', ['error' => 'notActive']);
+        }
+
         return $this->render('index/login.html.twig');
     }
 	

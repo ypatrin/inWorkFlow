@@ -1,0 +1,23 @@
+{% extends '::layout/layout.html.twig' %}
+
+{% block content %}
+    <section class="container">
+        <div class="logo">
+            <img src="{{ asset('media/img/logo.png') }}" />
+        </div>
+        <div class="login">
+            <h1>Error</h1>
+            {% if error == "notFound" %}
+                <p style="font-weight: bolder; text-align: center">Account is not found</p>
+            {% endif %}
+            {% if error == "notActive" %}
+                <p style="font-weight: bolder; text-align: center">Account is not active</p>
+                <p style="text-align: center">All information about activation was sent to your email</p>
+            {% endif %}
+        </div>
+
+        <div class="login-help">
+            <a href="index.html">Forgot your password? </a>
+        </div>
+    </section>
+{% endblock %}
