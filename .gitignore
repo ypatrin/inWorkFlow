@@ -1,0 +1,14 @@
+app/app/cache
+app/app/cache/*
+app/app/logs
+app/app/logs/*
+
+home/app/cache
+home/app/cache/*
+home/app/logs  
+home/app/logs/*
+
+logs
+logs/*
+ssl
+ssl/*
