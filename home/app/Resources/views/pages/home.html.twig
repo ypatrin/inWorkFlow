@@ -1,0 +1,172 @@
+{% extends '::layout.html.twig' %}
+{% block js %}
+    <script src="/media/js/function.js"></script>
+    <script src="/media/js/page.home.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="block-one">
+            <div class="shading"></div>
+            <div class="text-1 text" style="display: none;">
+                <span class="sysname">inWorkFlow</span> is a system of management of the company. Due to our system you will always be in work flow making effective monitoring and managing your working environment
+            </div>
+            <div class="text-2 text" style="display: none;">
+                From now setting tasks, making appointments, pointing calendar events or just chatting with the staff using <span class="sysname">inWorkFlow</span> becomes easier
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="title">System features</div>
+        <div class="title-subline"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span class="pft-icon glyphicon glyphicon-briefcase"></span>
+                    <div class="col-title">Managing projects</div>
+                    <div class="col-content">Using WorkFlow tools you can manage your projects easier than ever. Setting tasks to the stuff and controlling terms of their completing, discussing various issues of the project, managing the resources - all this becomes possible from anywhere in the world where there is Internet access.</div>
+                </div>
+                <div class="col">
+                    <span class="pft-icon icon-calendarthree"></span>
+                    <div class="col-title">Corporate events</div>
+                    <div class="col-content">You can plan variety of activities like corporate meetings, celebrating birthdays etc. The system will automatically send invitations to all the participants and remind of the incoming event.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="pft-icon icon-groups-friends"></span>
+                    <div class="col-title">Customer access</div>
+                    <div class="col-content">You can give a customer access to one or more projects to organize the approach of the customer with the performer directly that greatly saves time while managing the task.</div>
+                </div>
+                <div class="col">
+                    <span class="pft-icon icon-notificationbottom"></span>
+                    <div class="col-title">Stuff communication</div>
+                    <div class="col-content">All your employees will be able to communicate in informal atmosphere using corporate social network, and for work tasks use an easy and convenient corporate chat.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="pft-icon icon-report"></span>
+                    <div class="col-title">Flexible reports</div>
+                    <div class="col-content">Users will be able to customize reports. You decide by yourself what will be appeared in the reports.</div>
+                </div>
+                <div class="col">
+                    <span class="pft-icon icon-authentication-keyalt"></span>
+                    <div class="col-title">Permission levels</div>
+                    <div class="col-content">In the WorkFlow system is presented flexible configuration of permission levels. You will be able to configure personal user's rights and rights of the entire company department.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wucu">
+        <div class="title">Why users choose us?</div>
+        <div class="title-subline"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="/media/img/light_config.png" class="right"/>
+                </div>
+                <div class="col">
+                    <div class="col-title left">Easy configuration</div>
+                    <div class="col-content">To configure the system you do not need any special knowledge. You can configure the system without any help of others. Setup Wizard allows you to configure the system in a few minutes.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col-title left">User frendly interface</div>
+                    <div class="col-content">The system provides an easy and user frendly interface. You don't have to spend much time studying the system. After registration you can immediately start working.</div>
+                </div>
+                <div class="col">
+                    <img src="/media/img/light_iface.png" class="left"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="/media/img/win_client.png" class="right"/>
+                </div>
+                <div class="col">
+                    <div class="col-title left">Windows Client</div>
+                    <div class="col-content">After installing inWorkFlow Client on your computer you'll always be up to date with the latest company events. Also the inWorkFlow Client has an imbedded messenger that will make stuff communication as comfortable as ever.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col-title left">Mobile interface</div>
+                    <div class="col-content">With our mobile interface you will be able to stay online wherever you are. Outdoors or indoors, at work or at home inWorkFlow is always with you.</div>
+                </div>
+                <div class="col">
+                    <img src="/media/img/mobile_iface.png" class="left"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="popup">
+        <div class="popup-close close-btn"> <img src="{{ asset('media/img/close_btn.png') }}"/> </div>
+        <div class="pop-title">Sign UP</div>
+        <div class="pop-subline"></div>
+        <div class="error"></div>
+        <div class="pop-content">
+            <form method="POST">
+                <div class="form">
+                    <div class="success-msg">
+                        Registration successfully completed!<br/>
+                        To activate your account follow the instructions sent to your email.
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Account name:</div>
+                        <div class="form-row-2">
+                            <input type="text" name="account_name" style="width: 170px"/>
+                            .inworkflow.net
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Company name:</div>
+                        <div class="form-row-2"><input type="text" name="company" /></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Company website:</div>
+                        <div class="form-row-2"><input type="text" name="site" /></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Country:</div>
+                        <div class="form-row-2">
+                            <select name="country">
+                                <option disabled="disabled" value="" selected="selected">Select your country</option>
+                                {% for country in countries %}
+                                    <option value="{{ country.countryCode }}">{{ country.countryName }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Time Zone:</div>
+                        <div class="form-row-2">
+                            <select name="timezone">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="form-line">
+                        <div class="form-row-1">Your name:</div>
+                        <div class="form-row-2">
+                            <input type="text" name="user_name"/>
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Your email:</div>
+                        <div class="form-row-2"><input type="text" name="user_email"/></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-row-1">Password:</div>
+                        <div class="form-row-2"><input type="password" name="passwd" autocomplete="off"/></div>
+                    </div>
+                </div>
+                <div class="form-buttons">
+					<button type="submit" class="popup-submit">Submit</button>
+                    <button type="button" class="popup-close">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

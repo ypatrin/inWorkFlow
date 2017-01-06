@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <style>
+        body { margin: 0; color: #111723; }
+
+        header {
+            width: 100%;
+            margin: 0 0 10px 0;
+            background-color: #DCDCDC;
+            height: 50px;
+        }
+
+        header div.logo {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        header div.logo img {
+            padding: 7px 2px 5px;
+        }
+
+        div.content {
+            margin: 40px auto 10px;
+            width: 600px;
+        }
+
+        div.content div.line {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        div.activate {
+            margin: 20px auto 10px;
+            width: 600px;
+            border: 1px solid #dddddd;
+            background-color: rgba(197, 255, 247, 0.2);
+            border-radius: 5px;
+            padding: 5px 0 10px;
+            text-align: center;
+        }
+
+        div.activate div.line {
+            margin: 0 10px;
+        }
+
+        div.sign {
+            margin: 20px auto 10px;
+            width: 600px;
+            color: gray;
+        }
+
+        a {
+            color: #587da1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f53b47;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{{ base_url }}media/img/logo-horizontal.png" height="40px" />
+    </div>
+</header>
+<div class="content">
+    <div class="line"><b>Dear, {{ user['name'] }}!</b></div>
+    <div class="line">You have registered your company "{{ company['company'] }}" at inWorkFlow.</div>
+    <div class="line">To get started with the service you need to activate your account. After activation you will be able to configure your account using Setup Wizzard.</div>
+</div>
+</div>
+<div class="activate">
+    <div class="line">To activate your account follow this link:</div>
+    <div class="line"><a href="https://{{ company['name'] }}.{{ base_domain }}/activate?code={{ activateCode }}">https://{{ company['name'] }}.{{ base_domain }}/activate?code={{ activateCode }}</a></div>
+</div>
+<div class="sign">
+    <div class="line">Best regards,</div>
+    <div class="line">InWorkFlow Team</div>
+    <div class="line">&nbsp;</div>
+    <div class="line"><a href="{{ base_url }}">{{ base_url }}</a></div>
+    <div class="line"><a href="mailto:info@inworkflow.com">info@inworkflow.com</a></div>
+    <div class="line"><a href="mailto:support@inworkflow.com">support@inworkflow.com</a></div>
+</div>
+</body>

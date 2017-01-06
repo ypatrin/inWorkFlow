@@ -1,0 +1,30 @@
+{% extends '::layout/layout.html.twig' %}
+
+{% block content %}
+<section class="container">
+    <div class="logo">
+        <img src="{{ asset('media/img/logo.png') }}" />
+    </div>
+    <div class="login">
+        <h1>Activation</h1>
+        {% if activateStatus == false %}
+            {% if error == 'wrong_account' %}
+                <p style="font-weight: bolder; text-align: center">Account is not found</p>
+            {% endif %}
+            {% if error == 'link_expired' %}
+                <p style="font-weight: bolder; text-align: center">Activation link is expired</p>
+            {% endif %}
+            {% if error == 'already_activated' %}
+                <p style="font-weight: bolder; text-align: center">Your account is already activated</p>
+            {% endif %}
+        {% endif %}
+        {% if activateStatus == true %}
+            <p style="font-weight: bolder; text-align: center">Your account is successfully activated!</p>
+            <p>
+                All information about your account was sent to your email. <br/>
+                Please, configure your account using <a href="#">Setup Wizard</a>
+            </p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

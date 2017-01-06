@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>inWorkFlow</title>
+    <meta charset="utf-8">
+    <script src="{{ asset('media/js/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ asset('media/js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('media/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('media/nprogress/nprogress.js') }}"></script>
+    <script src="{{ asset('media/js/popup.js') }}"></script>
+    {% block js %}{% endblock %}
+	<link rel="stylesheet type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+	<link rel="stylesheet type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="{{ asset('media/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('media/css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('media/whhg-font/css/whhg.css') }}" />
+    <link rel='stylesheet' type="text/css" href="{{ asset('media/nprogress/nprogress.css') }}"  />
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    {% block css %}{% endblock %}
+    <link rel="icon" href="{{ asset('media/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('media/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+<div class="header">
+    <div class="wrapper clearfix">
+        <a class="logo" href="http://inworkflow.net"><img src="/media/img/logo-horizontal.png"/></a>
+        <div class="navigation">
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#why-users-choose-us">Why users choose us?</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li class="signup"><a href="#signup">Sign Up</a></li>
+                <ul>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+{% block content %}{% endblock %}
+</body>
+<script type="text/javascript">
+    NProgress.start();
+</script>
+</html>

@@ -1,0 +1,59 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="company")
+ */
+class Company
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    protected $account_name;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    protected $company_name;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $url;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $country;
+
+    /**
+     * @ORM\Column(type="string", length=1)
+     */
+    protected $active;
+
+    /**
+     * @ORM\Column(type="string", length=1)
+     */
+    protected $banned;
+
+    /**
+     * @ORM\Column(type="integer", length=11)
+     */
+    protected $registered_at;
+
+    /**
+     * @ORM\Column(type="integer", length=11)
+     */
+    protected $updated_at;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inWorkFlow</title>
+	<script src="/js/jquery-2.1.4.min.js"></script>
+	<script src="/js/jquery.scrollTo.min.js"></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/whhg-font/css/whhg.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="header">
+		<div class="wrapper clearfix">
+			<a class="logo" href="http://inworkflow.net"><img src="/img/logo-horizontal.png"/></a>
+			<div class="navigation">
+				<ul class="menu">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#why-users-choose-us">Why users choose us?</a></li>
+					<li><a href="#documentation">Documentation</a></li>
+					<li class="signup"><a href="#signup">Sign Up</a></li>
+				<ul>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="content">
+		<div class="block-one">
+			<div class="shading"></div>
+			<div class="text-1 text" style="display: none;">
+				<span class="sysname">inWorkFlow</span> is a system of management of the company. Due to our system you will always be in work flow making effective monitoring and managing your working environment
+			</div>
+			<div class="text-2 text" style="display: none;">
+				From now setting tasks, making appointments, pointing calendar events or just chatting with the staff using <span class="sysname">inWorkFlow</span> becomes easier
+			</div>
+		</div>
+	</div>
+	<div class="features">
+		<div class="title">System features</div>
+		<div class="title-subline"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<span class="pft-icon glyphicon glyphicon-briefcase"></span>
+					<div class="col-title">Managing projects</div>
+					<div class="col-content">Using WorkFlow tools you can manage your projects easier than ever. Setting tasks to the stuff and controlling terms of their completing, discussing various issues of the project, managing the resources - all this becomes possible from anywhere in the world where there is Internet access.</div>
+				</div>
+				<div class="col">
+					<span class="pft-icon icon-calendarthree"></span>
+					<div class="col-title">Corporate events</div>
+					<div class="col-content">You can plan variety of activities like corporate meetings, celebrating birthdays etc. The system will automatically send invitations to all the participants and remind of the incoming event.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<span class="pft-icon icon-groups-friends"></span>
+					<div class="col-title">Customer access</div>
+					<div class="col-content">You can give a customer access to one or more projects to organize the approach of the customer with the performer directly that greatly saves time while managing the task.</div>
+				</div>
+				<div class="col">
+					<span class="pft-icon icon-notificationbottom"></span>
+					<div class="col-title">Stuff communication</div>
+					<div class="col-content">All your employees will be able to communicate in informal atmosphere using corporate social network, and for work tasks use an easy and convenient corporate chat.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<span class="pft-icon icon-report"></span>
+					<div class="col-title">Flexible reports</div>
+					<div class="col-content">Users will be able to customize reports. You decide by yourself what will be appeared in the reports.</div>
+				</div>
+				<div class="col">
+					<span class="pft-icon icon-authentication-keyalt"></span>
+					<div class="col-title">Permission levels</div>
+					<div class="col-content">In the WorkFlow system is presented flexible configuration of permission levels. You will be able to configure personal user's rights and rights of the entire company department.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wucu">
+		<div class="title">Why users choose us?</div>
+		<div class="title-subline"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img src="/img/light_config.png" class="right"/>
+				</div>
+				<div class="col">
+					<div class="col-title left">Easy configuration</div>
+					<div class="col-content">To configure the system you do not need any special knowledge. You can configure the system without any help of others. Setup Wizard allows you to configure the system in a few minutes.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="col-title left">User frendly interface</div>
+					<div class="col-content">The system provides an easy and user frendly interface. You don't have to spend much time studying the system. After registration you can immediately start working.</div>
+				</div>
+				<div class="col">
+					<img src="/img/light_iface.png" class="left"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<img src="/img/win_client.png" class="right"/>
+				</div>
+				<div class="col">
+					<div class="col-title left">Windows Client</div>
+					<div class="col-content">After installing inWorkFlow Client on your computer you'll always be up to date with the latest company events. Also the inWorkFlow Client has an imbedded messenger that will make stuff communication as comfortable as ever.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="col-title left">Mobile interface</div>
+					<div class="col-content">With our mobile interface you will be able to stay online wherever you are. Outdoors or indoors, at work or at home inWorkFlow is always with you.</div>
+				</div>
+				<div class="col">
+					<img src="/img/mobile_iface.png" class="left"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		function slide(cls)
+		{
+			var time = 6000;
+			var timeEff = 1300;
+			
+			if (!cls) { 
+				$(".text-1").fadeIn(timeEff, function(){ 
+					setTimeout(function(){ 
+						slide(".text-2") 
+					}, time); 
+				}); 
+			}
+			
+			if (cls == ".text-1") {
+				$(".text-2").fadeOut(timeEff, function(){
+					$(".block-one").fadeOut("fast", function(){
+						$(".block-one").css('backgroundImage', 'url(/img/bg-1.jpg)');
+						$(".block-one").fadeIn("fast", function(){
+							$(".text-1").fadeIn(timeEff, function(){
+								setTimeout(function(){ slide(".text-2") }, time);
+							});
+						});
+					});
+					
+				});
+			}
+			if (cls == ".text-2") {
+				$(".text-1").fadeOut(timeEff, function(){
+					$(".block-one").fadeOut("fast", function(){
+						$(".block-one").css('backgroundImage', 'url(/img/bg-2.jpg)');
+						$(".block-one").fadeIn("fast", function(){
+							$(".text-2").fadeIn(timeEff, function(){
+								setTimeout(function(){ slide(".text-1") }, time);
+							});
+						});
+					});
+				});
+			}
+		}
+		
+		function scroll($target)
+		{
+			if ($target == '#home') 
+				$('body').scrollTo('0',{duration:1000});
+				
+			if ($target == '#features') 
+				$('body').scrollTo('div.features',{duration:1000, offset: -100});
+				
+			if ($target == '#why-users-choose-us') 
+				$('body').scrollTo('div.wucu',{duration:1000, offset: -100});
+		}
+		
+		$(document).ready(function(){
+			slide();
+			$("div.navigation ul.menu li a").click(function(){ scroll($(this).attr('href')); });
+			var $hash = location.hash;
+			scroll($hash);
+		});
+	</script>
+</body>
+</html>

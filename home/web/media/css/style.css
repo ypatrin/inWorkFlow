@@ -1,0 +1,461 @@
+@font-face {
+    font-family: "Yanone Kaffeesatz";
+    src: url(/media/fonts/YanoneKaffeesatz/YanoneKaffeesatz-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Kabel Dm BT";
+    src: url(/media/fonts/Kabel-Dm-BT-Demi.ttf);
+}
+body
+{
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 13px;
+	background: #ebebe8 none repeat scroll 0 0;
+	color: #888;
+}
+
+body a
+{
+	text-decoration: none;
+	-webkit-transition: color 0.3s ease;
+	-moz-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+div.header
+{
+	background: #444 url("/media/img/header-bg.png") repeat-x scroll left bottom;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	z-index: 400;
+	border-bottom: 1px solid gray;
+}
+
+div.navigation
+{
+	margin-left: 20px;
+	float: right;
+	padding: 20px;
+	position: relative;
+}
+
+div.navigation ul.menu
+{
+	list-style: outside none none;
+	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu li
+{
+	margin-right: 20px;
+	float: left;
+    position: relative;
+}
+
+ul.menu li.signup
+{
+	border: 1px solid gray;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -icab-border-radius: 5px;
+    margin: -7px 0px 0 50px;
+    padding: 5px 10px 0;
+}
+
+ul.menu li a
+{
+	display: block;
+    font-family: "Yanone Kaffeesatz",Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    overflow: hidden;
+    padding: 0 0 7px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+	color: #e2e0d7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	
+}
+
+ul.menu li a:hover
+{
+	text-decoration: none;
+	color: #ea4c88;
+}
+
+.wrapper 
+{
+    width: 940px;
+	margin: 0 auto;
+    position: relative;
+}
+
+.clearfix 
+{
+    clear: both;
+}
+
+a.logo
+{
+	display: block;
+    margin: 20px 0;
+    width: 200px;
+}
+
+a.logo img
+{
+	height: 60px;
+	float: left;
+}
+
+div.oblique-lines
+{
+	background: #ebebe8 url("/media/img/oblique-lines.png") repeat-x scroll 0 0;
+	border-top: 2px solid #747171;
+	width: 100%;
+	height: 8px;
+	margin: 0 0 10px;
+}
+
+div.content
+{
+	margin-top: 100px;
+}
+
+div.content div.text
+{
+	font-size: 28px;
+    padding: 50px;
+    width: 720px;
+	color: #e2e0d7;
+	font-family: "Lato","Helvetica Neue",Arial;
+	font-weight: 300;
+    letter-spacing: 0.7px;
+    line-height: 42px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	z-index: 300;
+	opacity: 1;
+	position: absolute;
+}
+
+span.sysname
+{
+	font-family: "Kabel Dm BT";
+	color: #35bfd8;
+	font-size: 32px;
+}
+
+div.content div.block-one
+{
+	background: #fff url("/media/img/bg-1.jpg") repeat-x scroll 50% 50%;
+	background-size: cover;
+	background-position: center 65%;
+	height: 557px;
+	z-index: 200;
+}
+
+div.shading
+{
+	background: #000 none repeat-x scroll 50% 50%;
+    height: 557px;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+    z-index: 300;
+}
+
+div.features 
+{
+	background: #FCFBFD none repeat-x scroll;
+}
+
+div.title
+{
+	color: #454546;
+    font: 40px "Yanone Kaffeesatz",Arial,sans-serif;
+    letter-spacing: 3px;
+    padding: 30px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.title-subline
+{
+	background: #9ccb3c none repeat scroll 0 0;
+    height: 1px;
+    margin: 10px auto 20px;
+    width: 165px;
+}
+
+div.container
+{
+	width: 1000px;
+	margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div.container div.row
+{
+	display: table;
+	width: 100%;
+	height: 200px;
+	margin: 20px 0;
+}
+
+div.container div.row div.col
+{
+    display: table;
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+div.container div.row div.col img
+{
+	margin: 0 20px;
+    max-height: 140px;
+    max-width: 200px;
+}
+
+div.container div.row div.col img.left
+{
+	float: left;
+}
+
+div.container div.row div.col img.right
+{
+	float: right;
+}
+
+div.container div.row div.col div.col-title
+{
+	color: #354e75;
+    /*font: 20px "Lato",Arial,sans-serif;*/
+	font-size: 20px;
+    padding-bottom: 10px;
+	padding-left: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.container div.row div.col div.col-content
+{
+	color: #454546;
+    /*font: 16px "Lato",Arial,sans-serif;*/
+	font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+	padding: 0 20px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.left
+{
+	text-align: left !important;
+}
+
+.pft-icon
+{
+	background: #3ec2f1 none repeat scroll 0 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    height: 60px;
+    margin-bottom: 10px;
+    margin-left: 45%;
+    padding-left: 2px;
+    padding-top: 19px;
+    text-align: center;
+    width: 60px;
+}
+
+div#overlay
+{
+	background-color: #000000;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	opacity: 0.6;
+	display: none;
+}
+
+div#popup
+{
+    width: 450px;
+    min-height: 200px;
+
+    position: fixed;
+    z-index: 1100;
+
+    top: 20%;
+    left: 35%;
+
+    background: #fcfbfd none repeat-x scroll 0 0;
+    border-radius: 5px;
+
+    display: none;
+}
+
+div#popup div.close-btn
+{
+    height: 15px;
+    left: 420px;
+    opacity: 0.2;
+    position: absolute;
+    top: 5px;
+    width: 15px;
+    cursor: pointer;
+}
+
+div#popup div.close-btn:hover
+{
+    opacity: 0.5;
+}
+
+div#popup div.close-btn img
+{
+    width: 15px;
+    height: 15px;
+}
+
+div#popup div.pop-title
+{
+    color: #454546;
+    font: 27px "Yanone Kaffeesatz",Arial,sans-serif;
+    letter-spacing: 2px;
+    padding: 10px 20px 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+div#popup div.pop-subline
+{
+    background: #9ccb3c none repeat scroll 0 0;
+    height: 1px;
+    margin: 8px auto 20px;
+    width: 410px;
+}
+
+div.form
+{
+    margin: 20px 0 0;
+}
+
+div.form div.form-line
+{
+    height: 30px;
+    margin: 3px 20px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+div.form div.form-line:last-child
+{
+    border-bottom: none;
+}
+
+div.form div.form-line div.form-row-1
+{
+    color: #454546;
+    float: left;
+    font: 13px/25px "Roboto",sans-serif;
+    height: 25px;
+    vertical-align: middle;
+    width: 130px;
+}
+
+div.form div.form-line div.form-row-2
+{
+    float: right;
+    width: 270px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+div.form div.form-line div.form-row-2 input[type=text],
+div.form div.form-line div.form-row-2 input[type=password],
+div.form div.form-line div.form-row-2 select
+{
+    margin: 2px 0;
+    width: 270px;
+    border: 1px solid #e6e6e7;
+    padding: 1px 5px;
+}
+
+div.form-buttons
+{
+    margin: 15px 20px;
+    text-align: right;
+}
+
+div.form-buttons button[type=submit], div.form-buttons button[type=button]
+{
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    background: #fcfbfd none repeat-x scroll 0 0;
+    font: 15px "Yanone Kaffeesatz",Arial,sans-serif;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+div.form-buttons button[type=submit]
+{
+    border: 1px solid rgba(53, 191, 216, 0.23);
+    color: rgba(53, 158, 184, 0.78);
+}
+
+div.form-buttons button[type=submit]:hover
+{
+    border: 1px solid rgba(235, 29, 26, 0.25);
+    color: rgba(225, 29, 26, 0.61);
+}
+
+div.form-buttons button[type=button]
+{
+    border: 1px solid #e2e0d7;
+    color: #b5b3aa;
+}
+
+div.error
+{
+	background-color: rgba(235, 29, 26, 0.06);
+    border: 1px solid rgba(211, 48, 41, 0.37);
+    color: #454546;
+    display: none;
+    font: 12px/25px "Open Sans",Arial,sans-serif;
+    margin: 3px 20px;
+    padding: 5px 10px;
+}
+
+.success-msg-head
+{
+    text-align: center;
+    font: 18px/25px "Yanone Kaffeesatz",Arial,sans-serif;
+    letter-spacing: 1.3px;
+    display: none;
+}
+
+.success-msg
+{
+    display: none;
+    font: 15px/25px "Open Sans",Arial,sans-serif;
+    height: 60px;
+    margin: 3px 20px;
+    text-align: center;
+}
