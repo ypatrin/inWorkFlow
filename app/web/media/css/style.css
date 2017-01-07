@@ -104,7 +104,7 @@ body {
   margin-top: 0;
 }
 .login input[type=text], .login input[type=password] {
-  width: 278px;
+  width: 307px;
 }
 .login p.remember_me {
   float: left;
