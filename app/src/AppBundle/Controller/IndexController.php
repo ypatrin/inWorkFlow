@@ -50,6 +50,24 @@ class IndexController extends Controller
 
         return $this->render('index/forgot.html.twig');
     }
+
+    /**
+     * @Route("/forgot/ajax/", name="forgot_password_ajax")
+     */
+    public function forgotAjax(Request $request)
+    {
+        print "ok";
+        exit;
+    }
+
+    /**
+     * @Route("/forgot/ok/", name="forgot_password_done")
+     */
+    public function forgotDone(Request $request)
+    {
+        print "ok";
+        exit;
+    }
 	
 	/**
      * @Route("/activate/", name="activate")
