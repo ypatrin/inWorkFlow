@@ -29,9 +29,30 @@ class IndexController extends Controller
 
         return $this->render('index/login.html.twig');
     }
+
+    /**
+     * @Route("/forgot/", name="forgot_password")
+     */
+    public function forgotPwd(Request $request)
+    {
+        $companyService = $this->get('service.company');
+        $company = $companyService->getCompany();
+
+        if (!$company)
+        {
+            return $this->render('index/loginError.html.twig', ['error' => 'notFound']);
+        }
+
+        if (!$companyService->isActive())
+        {
+            return $this->render('index/loginError.html.twig', ['error' => 'notActive']);
+        }
+
+        return $this->render('index/forgot.html.twig');
+    }
 	
 	/**
-     * @Route("/activate", name="activate")
+     * @Route("/activate/", name="activate")
      */
 	public function activate(Request $request)
 	{

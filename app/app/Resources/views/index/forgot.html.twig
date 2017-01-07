@@ -6,22 +6,12 @@
             <img src="{{ asset('media/img/logo.png') }}" />
         </div>
         <div class="login">
-            <h1>Sign in</h1>
+            <h1>Forgot your password</h1>
             <form method="post" action="index.html">
+                <p>We will send instructions for resetting your password on your email.</p>
                 <p><input type="text" name="login" value="" placeholder="Email"></p>
-                <p><input type="password" name="password" value="" placeholder="Password"></p>
-                <p class="remember_me">
-                    <label>
-                        <input type="checkbox" name="remember_me" id="remember_me">
-                        Stay signed in
-                    </label>
-                </p>
                 <p class="submit"><input type="submit" name="commit" value="Sign in"></p>
             </form>
-        </div>
-
-        <div class="login-help">
-            <a href="/forgot/">Forgot your password? </a>
         </div>
     </section>
 {% endblock %}
